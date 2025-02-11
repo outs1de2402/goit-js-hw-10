@@ -11,27 +11,35 @@
     <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/1-timer-ZacR2OXe.css">
   </head>
   <body>
-    <input type="text" id="datetime-picker" />
-    <button type="button" data-start>Start</button>
-
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+    <div class="container">
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start>Start</button>
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
       </div>
     </div>
+    <audio id="bg-music" autoplay loop>
+      <source
+        id="audio-source"
+        src="/goit-js-hw-10/assets/IVOXYGEN%20-%20Internet%20Love-6RZqbhJz.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
 
   </body>
 </html>
