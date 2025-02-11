@@ -83,3 +83,22 @@ startButton.addEventListener('click', () => {
     secondsEl.textContent = addLeadingZero(seconds);
   }, 1000);
 });
+
+const tracks = [
+  '../IVOXYGEN - Internet Love.mp3, ../The Kid LAROI - Nights Like This.mp3',
+]; // Список треків
+let currentTrack = 0; // Початковий трек
+
+const audio = document.getElementById('bg-music');
+const source = document.getElementById('audio-source');
+
+// Функція для перемикання треку
+function nextTrack() {
+  currentTrack = (currentTrack + 1) % tracks.length;
+  source.src = tracks[currentTrack];
+  audio.load(); // Оновлюємо аудіофайл
+  audio.play(); // Автоматично запускаємо новий трек
+}
+
+// Коли трек закінчується – перемикаємо на наступний
+audio.addEventListener('ended', nextTrack);
